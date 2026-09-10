@@ -13,19 +13,21 @@ here https://www.printables.com/model/109226-4x4-arduino-pro-micro-macropad
 the build guide is in the root of the zip
 
 
-      the hardware list
-    1. arduino pro micro must be a pro micro
-    2. 16 keyboard switches of desired type
-    3. 3d printed parts
-    4. wire preferrably two colors but one will work if you have a way to mark some of them
-    5. solder better if lead but any kind for electronics will work
-    6. keycaps custom ones you can make here easily to print https://vostoklabs.github.io/SVG-keycap-generator/
-      for more icons visit here https://simpleicons.org/ must be printed with a 0.2mm nozzle
-      and a printer that can do at least two colors
-    7. hot glue and hot glue gun
-    8. super glue
-    9. kapton tape to insulate the arduino if printed insulator does not fit because of the wires being too long
-    10. usb c cable for arduino than can transfer data
+  the hardware list
+  
+  1. arduino pro micro must be a pro micro
+  2. 16 keyboard switches of desired type
+  3. 3d printed parts
+  4. wire preferrably two colors but one will work if you have a way to mark some of them
+  5. solder better if lead but any kind for electronics will work
+  6. keycaps custom ones you can make here easily to print https://vostoklabs.github.io/SVG-keycap-generator/
+     for more icons visit here https://simpleicons.org/ must be printed with a 0.2mm nozzle
+     and a printer that can do at least two colors
+  7. hot glue and hot glue gun
+  8. super glue
+  9. kapton tape to insulate the arduino if printed insulator does not fit because of the wires being too long
+  10. usb c cable for arduino than can transfer data
+  11. machine screws and nuts the smallest screw with a matching nut is needed to put back plate on
 
 
 
@@ -38,24 +40,13 @@ it opens and it will also go to the tray if you minimize or x out of it to compl
 there will be a blue dot that is the app
 
 here is the circuit diagram 
+before soldering push the keyboard switches through the front of the frame 
 
-    Your Current Wire     Old Pro Mini Pin      New Pro Micro Pin Hole
     -------------------------------------------------------------------------------
-    Row 1 Line ---------- Pin 5 --------------- 5 (Stays identical)
-    Row 2 Line ---------- Pin 6 --------------- 6 (Stays identical)
-    Row 3 Line ---------- Pin 7 --------------- 7 (Stays identical)
-    Row 4 Line ---------- Pin 8 --------------- 8 (Stays identical)
-    Column 1 Line ------- Pin 9 --------------- 9 (Stays identical)
-    Column 2 Line ------- Pin 10 -------------- 10 (Stays identical)
-    Column 3 Line ------- Pin 11 -------------- MOSI (Solder to hole marked "16")
-    Column 4 Line ------- Pin 12 -------------- MISO (Solder to hole marked "14")
-
-
--------------------------------------------------------------------------------
-2. SCHEMATIC WIRING DIAGRAM (VECTOR BLUEPRINT)
--------------------------------------------------------------------------------
-This macro pad utilizes a standard diode-free matrix. Columns are pulsed as outputs, 
-while rows utilize internal pull-up resistors to detect drops to a ground state.
+    2. SCHEMATIC WIRING DIAGRAM (VECTOR BLUEPRINT)
+    -------------------------------------------------------------------------------
+    This macro pad utilizes a standard diode-free matrix. Columns are pulsed as outputs, 
+    while rows utilize internal pull-up resistors to detect drops to a ground state.
 
                [Col 1: Pin 9]  [Col 2: Pin 10] [Col 3: Pin 16] [Col 4: Pin 14]
 
@@ -72,9 +63,15 @@ while rows utilize internal pull-up resistors to detect drops to a ground state.
     [Row 4: Pin 8] --+---[SW 13]------+---[SW 14]------+---[SW 15]------+---[SW 16]
 
 
-* Wiring Mechanics:
-  - Each [SW] represents a mechanical switch containing 2 contact pins.
-  - Horizontal Row Pins: Connect one pin of all 4 switches in a row together.
-  - Vertical Column Pins: Connect the remaining pin of all 4 switches in a column together.
-  - No external resistors or physical blocking diodes are needed.
+    * Wiring Mechanics:
+      - Each [SW] represents a mechanical switch containing 2 contact pins.
+      - Horizontal Row Pins: Connect one pin of all 4 switches in a row together.
+      - Vertical Column Pins: Connect the remaining pin of all 4 switches in a column together.
+      - No external resistors or physical blocking diodes are needed.
 
+to program the arduino you need to install the arduino ide on your computer and set the com port to the one that your 
+arduino is on and it should say arduino leonardo open the arduino code file included in the macro-control folder upload it to your arduino
+
+once finished soldering and programming your arduino use hot glue and glue it down to the baseplate but make sure it is able to be plugged fully in once the baseplate then take your kapton tape and put it over the arduino to cover it but leave the pins where the wire are soldered on to are not covered
+
+to finish it off take your smallest machine screw and put a matching nut on it and then screw it in the hole on the frame of the macro pad with the back on 
