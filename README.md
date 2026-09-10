@@ -14,18 +14,18 @@ the build guide is in the root of the zip
 
 
       the hardware list
-  1. arduino pro micro must be a pro micro
-  2. 16 keyboard switches of desired type
-  3. 3d printed parts
-  4. wire preferrably two colors but one will work if you have a way to mark some of them
-  5. solder better if lead but any kind for electronics will work
-  6. keycaps custom ones you can make here easily to print https://vostoklabs.github.io/SVG-keycap-generator/
-     for more icons visit here https://simpleicons.org/ must be printed with a 0.2mm nozzle
-     and a printer that can do at least two colors
-  7. hot glue and hot glue gun
-  8. super glue
-  9. kapton tape to insulate the arduino if printed insulator does not fit because of the wires being too long
-  10. usb c cable for arduino than can transfer data
+    1. arduino pro micro must be a pro micro
+    2. 16 keyboard switches of desired type
+    3. 3d printed parts
+    4. wire preferrably two colors but one will work if you have a way to mark some of them
+    5. solder better if lead but any kind for electronics will work
+    6. keycaps custom ones you can make here easily to print https://vostoklabs.github.io/SVG-keycap-generator/
+      for more icons visit here https://simpleicons.org/ must be printed with a 0.2mm nozzle
+      and a printer that can do at least two colors
+    7. hot glue and hot glue gun
+    8. super glue
+    9. kapton tape to insulate the arduino if printed insulator does not fit because of the wires being too long
+    10. usb c cable for arduino than can transfer data
 
 
 
@@ -39,16 +39,16 @@ there will be a blue dot that is the app
 
 here is the circuit diagram 
 
-Your Current Wire     Old Pro Mini Pin      New Pro Micro Pin Hole
--------------------------------------------------------------------------------
-Row 1 Line ---------- Pin 5 --------------- 5 (Stays identical)
-Row 2 Line ---------- Pin 6 --------------- 6 (Stays identical)
-Row 3 Line ---------- Pin 7 --------------- 7 (Stays identical)
-Row 4 Line ---------- Pin 8 --------------- 8 (Stays identical)
-Column 1 Line ------- Pin 9 --------------- 9 (Stays identical)
-Column 2 Line ------- Pin 10 -------------- 10 (Stays identical)
-Column 3 Line ------- Pin 11 -------------- MOSI (Solder to hole marked "16")
-Column 4 Line ------- Pin 12 -------------- MISO (Solder to hole marked "14")
+    Your Current Wire     Old Pro Mini Pin      New Pro Micro Pin Hole
+    -------------------------------------------------------------------------------
+    Row 1 Line ---------- Pin 5 --------------- 5 (Stays identical)
+    Row 2 Line ---------- Pin 6 --------------- 6 (Stays identical)
+    Row 3 Line ---------- Pin 7 --------------- 7 (Stays identical)
+    Row 4 Line ---------- Pin 8 --------------- 8 (Stays identical)
+    Column 1 Line ------- Pin 9 --------------- 9 (Stays identical)
+    Column 2 Line ------- Pin 10 -------------- 10 (Stays identical)
+    Column 3 Line ------- Pin 11 -------------- MOSI (Solder to hole marked "16")
+    Column 4 Line ------- Pin 12 -------------- MISO (Solder to hole marked "14")
 
 
 -------------------------------------------------------------------------------
@@ -57,19 +57,19 @@ Column 4 Line ------- Pin 12 -------------- MISO (Solder to hole marked "14")
 This macro pad utilizes a standard diode-free matrix. Columns are pulsed as outputs, 
 while rows utilize internal pull-up resistors to detect drops to a ground state.
 
-          [Col 1: Pin 9]  [Col 2: Pin 10] [Col 3: Pin 16] [Col 4: Pin 14]
+               [Col 1: Pin 9]  [Col 2: Pin 10] [Col 3: Pin 16] [Col 4: Pin 14]
 
-                 |               |               |               |
-[Row 1: Pin 5] --+---[SW 1]-------+---[SW 2]-------+---[SW 3]-------+---[SW 4]
+                     |               |               |               |
+    [Row 1: Pin 5] --+---[SW 1]-------+---[SW 2]-------+---[SW 3]-------+---[SW 4]
 
-                 |               |               |               |
-[Row 2: Pin 6] --+---[SW 5]-------+---[SW 6]-------+---[SW 7]-------+---[SW 8]
+                     |               |               |               |
+    [Row 2: Pin 6] --+---[SW 5]-------+---[SW 6]-------+---[SW 7]-------+---[SW 8]
 
-                 |               |               |               |
-[Row 3: Pin 7] --+---[SW 9]-------+---[SW 10]------+---[SW 11]------+---[SW 12]
+                     |               |               |               |
+    [Row 3: Pin 7] --+---[SW 9]-------+---[SW 10]------+---[SW 11]------+---[SW 12]
 
-                 |               |               |               |
-[Row 4: Pin 8] --+---[SW 13]------+---[SW 14]------+---[SW 15]------+---[SW 16]
+                     |               |               |               |
+    [Row 4: Pin 8] --+---[SW 13]------+---[SW 14]------+---[SW 15]------+---[SW 16]
 
 
 * Wiring Mechanics:
